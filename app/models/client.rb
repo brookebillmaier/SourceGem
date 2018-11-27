@@ -22,7 +22,7 @@ class Client
   DB.prepare("create_client",
     <<-SQL
         INSERT INTO clients (name, industry, slogan, type, logo)
-        VALUES ( $1, $2, $3, $4, $5)
+        VALUES ( $1, $2, $3, $4, $5 )
         RETURNING id, name, industry, slogan, type, logo;
     SQL
   )
@@ -51,7 +51,6 @@ class Client
 
 def self.all
   results = DB.exec("SELECT * FROM clients;")
-
   return results.map do |result|
     {
       "id" => result["id"].to_i,
@@ -63,8 +62,6 @@ def self.all
     }
   end
 end
-
-# Get one by id
 
 def self.find(id)
   result = DB.exec("SELECT * FROM clients WHERE id=#{id};")
@@ -108,7 +105,8 @@ def self.update(id, opts)
   results = DB.exec(
     <<-SQL
       UPDATE clients
-      SET name='#{opts["name"]}', industry='#{opts["industry"]}',
+      SET name='#{opts["name"]}',
+      industry='#{opts["industry"]}',
       slogan='#{opts["slogan"]}',
       type='#{opts["type"]}',
       logo='#{opts["logo"]}'

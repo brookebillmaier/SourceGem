@@ -9,6 +9,8 @@ gem 'rails', '~> 5.2.1'
 gem 'pg', '>= 0.18', '< 2.0'
 #Faker
 gem 'faker'
+#Bourbon 
+gem "bourbon"
 #Neat
 gem "neat"
 # Use Puma as the app server
