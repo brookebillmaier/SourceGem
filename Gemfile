@@ -9,7 +9,11 @@ gem 'rails', '~> 5.2.1'
 gem 'pg', '>= 0.18', '< 2.0'
 #Faker
 gem 'faker'
-#Bourbon 
+#react Bootstrap
+gem 'react-bootstrap-rails'
+
+gem 'bootstrap-sass'
+#Bourbon
 gem "bourbon"
 #Neat
 gem "neat"

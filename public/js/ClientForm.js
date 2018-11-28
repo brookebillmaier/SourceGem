@@ -75,7 +75,7 @@ class ClientForm extends React.Component {
               value={this.state.type}
             />
           </div>
-          <label className='label 'for='logo'>Logo</label>
+          <label className='label' for='logo'>Logo</label>
           <div className='control'>
             <input
               className='input'
@@ -89,7 +89,9 @@ class ClientForm extends React.Component {
             <input className='submit' type='submit' />
           </div>
         </form>
-          <button onClick={()=> this.props.toggleState('clientsListIsVisible', 'addClientIsVisible')}>Cancel</button>
+          <button onClick={()=> {
+            console.log("clicked")
+            this.props.toggleState('editClientIsVisible')}}>Cancel</button>
       </div>
     )
   }
