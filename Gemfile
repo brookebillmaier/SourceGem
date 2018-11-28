@@ -9,9 +9,9 @@ gem 'rails', '~> 5.2.1'
 gem 'pg', '>= 0.18', '< 2.0'
 #Faker
 gem 'faker'
-#Bourbon 
+#Bourbon
 gem "bourbon"
-
+gem 'bootstrap-sass', '3.2.0.2'
 gem 'sass'
 #Neat
 gem "neat"
