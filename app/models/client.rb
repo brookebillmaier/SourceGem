@@ -1,5 +1,6 @@
 class Client
   #connect to heroku / postgres
+  RAILS_ENV=production bundle exec rake assets:precompile
   if(ENV['DATABASE_URL'])
     uri = URI.parse(ENV['DATABASE_URL'])
     DB = PG.connect(uri.hostname, uri.port, nil, nil, uri.path[1..-1], uri.user, uri.password)
