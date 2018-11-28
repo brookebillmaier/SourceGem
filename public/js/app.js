@@ -1,5 +1,3 @@
-
-
 class App extends React.Component {
   render () {
     return (
@@ -18,7 +16,7 @@ class App extends React.Component {
             <NavItem eventKey={2} href="#">
               Link
             </NavItem>
-            <NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">
+            <NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown pullRight">
               <MenuItem eventKey={3.1}>Action</MenuItem>
               <MenuItem eventKey={3.2}>Another action</MenuItem>
               <MenuItem eventKey={3.3}>Something else here</MenuItem>
@@ -29,10 +27,48 @@ class App extends React.Component {
             </Navbar>
               <ControlledCarousel />
         </div>
+
         <div className ='services'>
+        <h1>What We Do</h1>
 
-
-
+          <Grid>
+            <Row>
+              <Col xs={6} md={3}>
+                  <Thumbnail href="#" alt="171x180" src="/thumbnail.png" />
+                  <h4>Website Design</h4>
+              </Col>
+              <Col xs={6} md={3}>
+                <Thumbnail href="#" alt="171x180" src="/thumbnail.png" />
+                <h4>Marketing</h4>
+              </Col>
+              <Col xs={6} md={3}>
+                <Thumbnail href="#" alt="171x180" src="/thumbnail.png" />
+                <h4>Branding</h4>
+              </Col>
+              <Col xs={6} md={3}>
+                <Thumbnail href="#" alt="171x180" src="/thumbnail.png" />
+                <h4>Social Media</h4>
+              </Col>
+            </Row><br />
+            <Row>
+              <Col xs={6} md={3}>
+                  <Thumbnail href="#" alt="171x180" src="/thumbnail.png" />
+                  <h4>SEO</h4>
+              </Col>
+              <Col xs={6} md={3}>
+                <Thumbnail href="#" alt="171x180" src="/thumbnail.png" />
+                <h4>Advertising</h4>
+              </Col>
+              <Col xs={6} md={3}>
+                <Thumbnail href="#" alt="171x180" src="/thumbnail.png" />
+                <h4>Reporting and Analytics</h4>
+              </Col>
+              <Col xs={6} md={3}>
+                <Thumbnail href="#" alt="171x180" src="/thumbnail.png" />
+                <h4>Email Marketing</h4>
+              </Col>
+            </Row>
+          </Grid>
         </div>
         <div className='main'>
           <Clients />
@@ -55,6 +91,15 @@ var NavItem = ReactBootstrap.NavItem;
 var NavDropdown = ReactBootstrap.NavDropdown;
 var MenuItem = ReactBootstrap.MenuItem;
 var Jumbotron = ReactBootstrap.Jumbotron;
+var Grid = ReactBootstrap.Grid;
+var Row = ReactBootstrap.Row;
+var Col = ReactBootstrap.Col;
+var Thumbnail = ReactBootstrap.Thumbnail;
+var Modal = ReactBootstrap.Modal;
+var ModalFooter = ReactBootstrap.ModalFooter;
+var ModalBody = ReactBootstrap.ModalBody;
+var ModalDialog = ReactBootstrap.ModalDialog;
+
 
 
 
@@ -71,7 +116,7 @@ class ControlledCarousel extends React.Component {
   }
 
   handleSelect(selectedIndex, e) {
-    alert(`selected=${selectedIndex}, direction=${e.direction}`);
+    // alert(`selected=${selectedIndex}, direction=${e.direction}`);
     this.setState({
       index: selectedIndex,
       direction: e.direction
@@ -88,21 +133,21 @@ class ControlledCarousel extends React.Component {
         onSelect={this.handleSelect}
       >
         <Carousel.Item>
-          <img width={700} height={350} alt="900x500" src="./images/scroller1.jpg" />
+          <img width={700} height={500} alt="900x500" src="./images/scroller1.jpg" />
           <Carousel.Caption>
             <h3>First slide label</h3>
             <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
-          <img width={700} height={350} alt="900x500" src="./images/scroller1.jpg" />
+          <img width={700} height={500} alt="900x500" src="./images/scroller1.jpg" />
           <Carousel.Caption>
             <h3>Second slide label</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
-          <img width={700} height={350} alt="900x500" src="./images/scroller1.jpg" />
+          <img width={700} height={500} alt="900x500" src="./images/scroller1.jpg" />
           <Carousel.Caption>
             <h3>Third slide label</h3>
             <p>
