@@ -10,9 +10,9 @@ gem 'pg', '>= 0.18', '< 2.0'
 #Faker
 gem 'faker'
 #Bourbon
-gem "bourbon"
+gem 'bourbon'
+
 gem 'bootstrap-sass', '3.2.0.2'
-gem 'sass'
 #Neat
 gem "neat"
 # Use Puma as the app server
