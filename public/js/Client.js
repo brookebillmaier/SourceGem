@@ -4,16 +4,15 @@ class Client extends React.Component {
           <div className="mainClient">
 
 
-              <img src={this.props.client.logo} alt={this.props.client.name} />
+              <img class="logo" src={this.props.client.logo} alt={this.props.client.name} />
               <h3><span>Name: </span> {this.props.client.name} </h3>
               <p><span>Industry: </span> {this.props.client.industry} </p>
               <p><span>Slogan: </span> {this.props.client.slogan} </p>
               <p><span>Type: </span>{this.props.client.type} </p>
-            <button onClick={()=> this.props.toggleState('clientIsVisible', 'clientsListIsVisible')}>See Full List</button>
+            <Button bsStyle="primary" onClick={()=> this.props.toggleState('clientIsVisible', 'clientsListIsVisible')}>See Full List</Button>
 
 
-            <button onClick={()=> this.props.toggleState('editClientIsVisible')}>Edit</button>
-
+            <Button bsStyle="warning" onClick={()=> this.props.toggleState('editClientIsVisible')}>Edit</Button>
 
         </div>
       )

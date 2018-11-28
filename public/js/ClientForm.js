@@ -89,9 +89,9 @@ class ClientForm extends React.Component {
             <input className='submit' type='submit' />
           </div>
         </form>
-          <button onClick={()=> {
+          <Button bsStyle="primary" onClick={()=> {
             console.log("clicked")
-            this.props.toggleState('editClientIsVisible')}}>Cancel</button>
+            this.props.toggleState('editClientIsVisible')}}>Cancel</Button>
       </div>
     )
   }

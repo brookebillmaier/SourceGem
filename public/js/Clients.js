@@ -80,7 +80,7 @@ class Clients extends React.Component {
         return updatedClient.json()
       })
       .then(jsonedClient => {
-        //this.getClients()
+        this.getClients()
         this.toggleState('editClientIsVisible', 'clientIsVisible', 'clientsListIsVisible')
       })
       .catch(error => console.log(error))
@@ -114,14 +114,22 @@ class Clients extends React.Component {
   render () {
     return (
       <div className='Portfolio'>
+      <Jumbotron>
+      <h1>View Our Portfolio!</h1>
+      <p>
+        This is a simple hero unit, a simple jumbotron-style component for calling
+        extra attention to featured content or information.
+      </p>
+      <p>
+        <Button bsStyle="primary" onClick={()=>this.toggleState('addClientIsVisible', )}>Become a Client</Button>
 
-        <button onClick={()=>this.toggleState('addClientIsVisible', )}>Become a Client</button>
-
-        <button
+        <Button bsStyle="primary"
          onClick={()=>this.toggleState('clientsListIsVisible')}
          >
-         View Our Portfolio
-         </button>
+         View Full Portfolio
+         </Button>
+         </p>
+         </Jumbotron>
 
         {
           this.state.clientsListIsVisible ?
