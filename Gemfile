@@ -11,6 +11,8 @@ gem 'pg', '>= 0.18', '< 2.0'
 gem 'faker'
 #Bourbon 
 gem "bourbon"
+
+gem 'sass'
 #Neat
 gem "neat"
 # Use Puma as the app server

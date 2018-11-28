@@ -15,6 +15,7 @@ class Clients extends React.Component {
     this.getClient = this.getClient.bind(this)
     this.toggleState = this.toggleState.bind(this)
     this.handleUpdateSubmit = this.handleUpdateSubmit.bind(this)
+    this.handleSubmitButton = this.handleSubmitButton.bind(this)
   }
 
   componentDidMount () {
@@ -41,6 +42,11 @@ class Clients extends React.Component {
     updatedClients.unshift(client)
     this.setState({clients: updatedClients})
   }
+
+  handleSubmitButton () {
+    this.setState({ showButton: true})
+  }
+
 
   handleCreateSubmit (client) {
     fetch('/clients', {
@@ -74,12 +80,13 @@ class Clients extends React.Component {
         return updatedClient.json()
       })
       .then(jsonedClient => {
-        //this.getClients()
-        this.toggleState('editClientIsVisible', 'clientIsVisible')
+        this.getClients()
+        this.toggleState('editClientIsVisible', 'clientIsVisible', 'clientsListIsVisible')
       })
       .catch(error => console.log(error))
 
-}
+    }
+
 
   getClient( client ) {
     this.setState({client: client})
@@ -104,19 +111,26 @@ class Clients extends React.Component {
     })
   }
 
-
   render () {
     return (
       <div className='Portfolio'>
-        <h2> Clients </h2>
+      <Jumbotron>
+      <h1>View Our Portfolio!</h1>
+      <p>
+        This is a simple hero unit, a simple jumbotron-style component for calling
+        extra attention to featured content or information.
+      </p>
+      <p>
+        <Button bsStyle="primary" onClick={()=>this.toggleState('addClientIsVisible', )}>Become a Client</Button>
 
-        <button onClick={()=>this.toggleState('addClientIsVisible', )}>Become a Client</button>
-
-         <button
+        <Button bsStyle="primary"
          onClick={()=>this.toggleState('clientsListIsVisible')}
          >
-         View Our Portfolio
-         </button>
+         View Full Portfolio
+         </Button>
+         </p>
+         </Jumbotron>
+
         {
           this.state.clientsListIsVisible ?
             <ClientsList
@@ -140,8 +154,20 @@ class Clients extends React.Component {
             toggleState={this.toggleState}
             client={this.state.client}
             handleSubmit={this.handleUpdateSubmit}
+
            /> : ''
       }
+      {
+        this.state.editClientIsVisible  ?
+         <ClientForm
+          toggleState={this.toggleState}
+          client={this.state.client}
+          handleSubmit={this.handleUpdateSubmit}
+         /> : ''
+    }
+
+
+
       </div>
     )
   }
