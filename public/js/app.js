@@ -49,43 +49,46 @@ class App extends React.Component {
         <h1>What We Do</h1>
 
           <Grid>
+          <center>
             <Row>
               <Col xs={6} md={3}>
-                  <Thumbnail href="#" alt="171x180" src="/thumbnail.png" />
+                  <Thumbnail href="#" alt="171x180" src="./images/4.png" />
                   <h4>Website Design</h4>
               </Col>
               <Col xs={6} md={3}>
-                <Thumbnail href="#" alt="171x180" src="/thumbnail.png" />
+                <Thumbnail href="#" alt="171x180" src="./images/33.png" />
                 <h4>Marketing</h4>
               </Col>
               <Col xs={6} md={3}>
-                <Thumbnail href="#" alt="171x180" src="/thumbnail.png" />
+                <Thumbnail href="#" alt="171x180" src="./images/22.png" />
                 <h4>Branding</h4>
               </Col>
               <Col xs={6} md={3}>
-                <Thumbnail href="#" alt="171x180" src="/thumbnail.png" />
+                <Thumbnail href="#" alt="171x180" src="./images/11.png" />
                 <h4>Social Media</h4>
               </Col>
             </Row><br />
             <Row>
               <Col xs={6} md={3}>
-                  <Thumbnail href="#" alt="171x180" src="/thumbnail.png" />
-                  <h4>SEO</h4>
+                  <Thumbnail href="#" alt="171x180" src="./images/8.png" />
+                  <h4>Advertising</h4>
               </Col>
               <Col xs={6} md={3}>
-                <Thumbnail href="#" alt="171x180" src="/thumbnail.png" />
-                <h4>Advertising</h4>
+                <Thumbnail href="#" alt="171x180" src="./images/7.png" />
+                <h4>SEO</h4>
               </Col>
               <Col xs={6} md={3}>
-                <Thumbnail href="#" alt="171x180" src="/thumbnail.png" />
+                <Thumbnail href="#" alt="171x180" src="./images/6.png" />
                 <h4>Reporting and Analytics</h4>
               </Col>
               <Col xs={6} md={3}>
-                <Thumbnail href="#" alt="171x180" src="/thumbnail.png" />
+                <Thumbnail href="#" alt="171x180" src="./images/5.png" width ="262px"/>
                 <h4>Email Marketing</h4>
               </Col>
             </Row>
+            </center>
           </Grid>
+
         </div>
         <div className='main'>
           <Clients />

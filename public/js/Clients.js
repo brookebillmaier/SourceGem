@@ -122,7 +122,7 @@ class Clients extends React.Component {
         <p>
           We love what we do and we hope you do too. View our work and happy clients below.
         </p>
-        <p>
+        <p class="buttons">
           <Button bsStyle="primary" onClick={()=>this.toggleState('addClientIsVisible', )}>Become a Client</Button>
 
           <Button bsStyle="primary"

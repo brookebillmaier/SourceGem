@@ -2,7 +2,7 @@ class ClientsList extends React.Component {
   render (){
     return (
       <table class="portfolioTable">
-      <h2> Clients </h2>
+      <h2> View Some of our Clients </h2>
         <tbody class ="clientsList">
         {this.props.clients.map((client, index) => {
           return (
