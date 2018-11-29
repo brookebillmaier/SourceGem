@@ -17,3 +17,7 @@
 @import "bourbon";
 @import "home";
 @import "users";
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+//= require react_bootstrap

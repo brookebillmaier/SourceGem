@@ -4,9 +4,9 @@ Rails.application.routes.draw do
 
   get '/clients', to: 'clients#index'
   get '/clients/:id', to: 'clients#show'
-  get '/clients', to: 'clients#create'
-  get '/clients/:id', to: 'clients#delete'
-  get '/clients/:id', to: 'clients#update'
+  post '/clients', to: 'clients#create'
+  delete '/clients/:id', to: 'clients#delete'
+  put '/clients/:id', to: 'clients#update'
 
 
 end
