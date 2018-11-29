@@ -6,11 +6,15 @@ class ClientForm extends React.Component {
       industry: '',
       slogan: '',
       type: '',
-      logo: ''
+      logo: '',
+      show: true
     }
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
+    this.handleClose = this.handleClose.bind(this);
   }
+
+
   componentDidMount(){
     if(this.props.client){
       this.setState({
@@ -24,6 +28,11 @@ class ClientForm extends React.Component {
     }
   }
 
+  handleClose() {
+     this.setState({ show: false });
+   }
+
+
   handleChange (event) {
     this.setState({[event.target.id]: event.target.value})
 
@@ -34,7 +43,15 @@ class ClientForm extends React.Component {
   }
   render () {
     return (
+    <div className="static-modal">
+      <Modal.Dialog>
+        <Modal.Header>
+          <Modal.Title>Become a Client</Modal.Title>
+        </Modal.Header>
+      <Modal.Body>
       <div className='field'>
+      <center>
+
         <form onSubmit={this.handleSubmit}>
           <label className='label' for='name'>Name</label>
           <div className='control'>
@@ -50,7 +67,7 @@ class ClientForm extends React.Component {
           <div className='control'>
             <input
               className='input'
-              type='number'
+              type='text'
               onChange={this.handleChange}
               value={this.state.industry}
               id='industry'
@@ -69,13 +86,13 @@ class ClientForm extends React.Component {
           <div className='control'>
             <input
               className='input'
-              type='tel'
+              type='text'
               id='type'
               onChange={this.handleChange}
               value={this.state.type}
             />
           </div>
-          <label className='label 'for='logo'>Logo</label>
+          <label className='label' for='logo'>Logo</label>
           <div className='control'>
             <input
               className='input'
@@ -89,8 +106,19 @@ class ClientForm extends React.Component {
             <input className='submit' type='submit' />
           </div>
         </form>
-          <button onClick={()=> this.props.toggleState('clientsListIsVisible', 'addClientIsVisible')}>Cancel</button>
+          </center>
       </div>
+      </Modal.Body>
+          <Modal.Footer>
+          <Button onClick={()=> {
+            console.log("clicked")
+            this.props.toggleState(handleClose())}}>Cancel</Button>
+
+            <Button onClick={this.handleClose()}>Close</Button>
+
+        </Modal.Footer>
+      </Modal.Dialog>
+    </div>
     )
   }
 }

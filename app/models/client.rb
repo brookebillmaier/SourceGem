@@ -66,16 +66,16 @@ end
 def self.find(id)
   result = DB.exec("SELECT * FROM clients WHERE id=#{id};")
   return {
-      "id" => result["id"].to_i,
-      "name"=> result["name"],
-      "industry" => result["industry"],
-      "slogan" => result["slogan"],
-      "type" => result["type"],
-      "logo" => result["logo"],
+      "id" => result.first["id"].to_i,
+      "name"=> result.first["name"],
+      "industry" => result.first["industry"],
+      "slogan" => result.first["slogan"],
+      "type" => result.first["type"],
+      "logo" => result.first["logo"],
   }
 end
 
-#create clients route
+
 def self.create(opts)
   results = DB.exec(
     <<-SQL
@@ -94,13 +94,13 @@ def self.create(opts)
   }
 end
 
-#delete from ID route
+
 def self.delete(id)
   results = DB.exec("DELETE FROM clients WHERE id=#{id};")
   return {"deleted" => true}
 end
 
-#update route
+
 def self.update(id, opts)
   results = DB.exec(
     <<-SQL
