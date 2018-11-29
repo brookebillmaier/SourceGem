@@ -5,10 +5,24 @@
 
 .label {
   color: black;
+  font-size: 20px;
+  float: left;
+  padding: 0;
+  margin: auto 5px;
+}
+.input {
+  font-size: 20px;
+  width: 300px;
+  height: 30px;
+  margin-left: 0px;
+  padding-left: 0px;
+  align-self: auto;
 }
 
 body {
   background-color: #494747;
+  margin-bottom: 10vw;
+  padding-bottom: 10px;
 }
 .brandlogo:a {
   color: #5271ff;
@@ -30,6 +44,57 @@ body {
 .jumbotron {
   color: black;
 }
-.Portfolio {
-  
+
+
+.aboutus {
+  width: 50vw;
+  align: center;
+}
+
+.aboutus h1 {
+  border-bottom: 1px solid white;
+}
+.control {
+  color: black;
+}
+.deleteButton {
+  float: right;
+}
+
+.clientsList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.client, .showlogo {
+  margin: 2vw;
+  background-color: lightgray;
+  border-radius: 5px;
+  padding: 10px;
+  align-content: center;
+  box-shadow: .5em .5em 2em black;
+}
+
+.client:hover, .showlogo:hover {
+  background-color: white;
+}
+
+.portfolioTable {
+  align-items: center;
+}
+
+.showlogo {
+  width: 400px;
+  align-self: center;
+}
+
+.mainClient h5 {
+  letter-spacing: 1px;
+
+}
+.mainClient span {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 20px;
 }

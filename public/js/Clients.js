@@ -120,8 +120,7 @@ class Clients extends React.Component {
         <Jumbotron>
         <h1>View Our Portfolio!</h1>
         <p>
-          This is a simple hero unit, a simple jumbotron-style component for calling
-          extra attention to featured content or information.
+          We love what we do and we hope you do too. View our work and happy clients below.
         </p>
         <p>
           <Button bsStyle="primary" onClick={()=>this.toggleState('addClientIsVisible', )}>Become a Client</Button>
@@ -182,7 +181,6 @@ class Clients extends React.Component {
         toggleState={this.toggleState}
        /> : ''
   }
-
 
       </div>
     )

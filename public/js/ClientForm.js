@@ -46,11 +46,13 @@ class ClientForm extends React.Component {
     <div className="static-modal">
       <Modal.Dialog>
         <Modal.Header>
-          <Modal.Title>Become a Client</Modal.Title>
+          <Modal.Title>
+          <Button bsStyle="primary" onClick={()=> {
+            console.log("clicked")
+            this.props.toggleState('addClientIsVisible')}}>X</Button></Modal.Title>
         </Modal.Header>
       <Modal.Body>
       <div className='field'>
-      <center>
 
         <form onSubmit={this.handleSubmit}>
           <label className='label' for='name'>Name</label>
@@ -102,21 +104,18 @@ class ClientForm extends React.Component {
               value={this.state.logo}
             />
           </div>
+          <center>
           <div className='control'>
             <input className='submit' type='submit' />
-          </div>
+          </div></center>
         </form>
-
-          <Button bsStyle="primary" onClick={()=> {
-            console.log("clicked")
-            this.props.toggleState('editClientIsVisible')}}>Cancel</Button>
-          </center>
       </div>
       </Modal.Body>
           <Modal.Footer>
 
-
-          <Button>Close</Button>
+          <Button bsStyle="primary" onClick={()=> {
+            console.log("clicked")
+            this.props.toggleState('editClientIsVisible')}}>Cancel</Button>
 
         </Modal.Footer>
       </Modal.Dialog>

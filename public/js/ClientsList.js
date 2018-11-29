@@ -1,22 +1,22 @@
 class ClientsList extends React.Component {
   render (){
     return (
-      <table>
+      <table class="portfolioTable">
       <h2> Clients </h2>
-        <tbody>
+        <tbody class ="clientsList">
         {this.props.clients.map((client, index) => {
           return (
-            <tr>
-              <td onClick={()=> { this.props.getClient(client); this.props.toggleState('clientsListIsVisible', 'clientIsVisible')}}>
+
+              <td class ="client">
+              <Button bsStyle="danger" className='deleteButton' onClick={() => this.props.deleteClient(client, index)}>X</Button>
+
+              <div onClick={()=> { this.props.getClient(client); this.props.toggleState('clientsListIsVisible', 'clientIsVisible')}}>
                 <img class="logo" src={client.logo} alt={client.name} />
+                </div>
               </td>
-              <td className='client' onClick={()=> { this.props.getClient(client); this.props.toggleState('clientsListIsVisible', 'clientIsVisible')}}>
-                <h3> {client.name} </h3>
-              </td>
-              <td>
-                  <Button bsStyle="danger" className='deleteButton' onClick={() => this.props.deleteClient(client, index)}>X</Button>
-              </td>
-            </tr>
+
+
+
           )
         })}
         </tbody>

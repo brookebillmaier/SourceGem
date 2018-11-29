@@ -16,22 +16,22 @@ class App extends React.Component {
             <Nav>
 
               <NavItem eventKey={2} href="#">
-                Link
+                About
               </NavItem>
-              <NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">
-                <MenuItem eventKey={3.1}>Action</MenuItem>
-                <MenuItem eventKey={3.2}>Another action</MenuItem>
-                <MenuItem eventKey={3.3}>Something else here</MenuItem>
+              <NavDropdown eventKey={3} title="Why SourceGem?" id="basic-nav-dropdown">
+                <MenuItem eventKey={3.1}>Services We Offer</MenuItem>
+                <MenuItem eventKey={3.2}>View Portfolio</MenuItem>
+                <MenuItem eventKey={3.3}>Testimonials</MenuItem>
                 <MenuItem divider />
-                <MenuItem eventKey={3.3}>Separated link</MenuItem>
+                <MenuItem eventKey={3.3}>Become a Client</MenuItem>
               </NavDropdown>
             </Nav>
             <Nav pullRight>
               <NavItem eventKey={1} href="#">
-                Link Right
+                Careers
               </NavItem>
               <NavItem eventKey={2} href="#">
-                Link Right
+                Contact Us
               </NavItem>
               <NavItem eventKey={2} href="#">
 
@@ -152,8 +152,7 @@ class ControlledCarousel extends React.Component {
         <Carousel.Item>
           <img alt="700x500" src="./images/1.png" />
           <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -165,10 +164,7 @@ class ControlledCarousel extends React.Component {
         <Carousel.Item>
           <img alt="700x500" src="./images/3.png" />
           <Carousel.Caption>
-            <h3>Third slide label</h3>
-            <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-            </p>
+
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
