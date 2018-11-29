@@ -2,6 +2,15 @@
   width: 250px; }
 
 .label {
-  color: black; }
+  color: black;
+  align: left;
+  font-size: 20px; }
+
+.input {
+  height: 30px;
+  width: 60vw; }
+
+.Nav pullRight {
+  margin-right: 10px; }
 
 /*# sourceMappingURL=main.css.map */

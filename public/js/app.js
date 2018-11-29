@@ -1,30 +1,47 @@
 class App extends React.Component {
   render () {
     return (
-      <div>
+      <div className="main">
         <div className='header'>
-          <Navbar>
-            <Navbar.Header>
-              <Navbar.Brand>
-                <a href="/">SourceGem</a>
-              </Navbar.Brand>
-            </Navbar.Header>
+        <Navbar inverse collapseOnSelect>
+          <Navbar.Header>
+            <Navbar.Brand>
+              <a href="#brand">SourceGem</a>
+            </Navbar.Brand>
+            <Navbar.Toggle />
+          </Navbar.Header>
+          <Navbar.Collapse>
             <Nav>
-            <NavItem eventKey={1} href="#">
-              Link
-            </NavItem>
-            <NavItem eventKey={2} href="#">
-              Link
-            </NavItem>
-            <NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown pullRight">
-              <MenuItem eventKey={3.1}>Action</MenuItem>
-              <MenuItem eventKey={3.2}>Another action</MenuItem>
-              <MenuItem eventKey={3.3}>Something else here</MenuItem>
-              <MenuItem divider />
-              <MenuItem eventKey={3.4}>Separated link</MenuItem>
-            </NavDropdown>
+              <NavItem eventKey={1} href="#">
+                Link
+              </NavItem>
+              <NavItem eventKey={2} href="#">
+                Link
+              </NavItem>
+              <NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">
+                <MenuItem eventKey={3.1}>Action</MenuItem>
+                <MenuItem eventKey={3.2}>Another action</MenuItem>
+                <MenuItem eventKey={3.3}>Something else here</MenuItem>
+                <MenuItem divider />
+                <MenuItem eventKey={3.3}>Separated link</MenuItem>
+              </NavDropdown>
             </Nav>
-            </Navbar>
+            <Nav pullRight>
+              <NavItem eventKey={1} href="#">
+                Link Right
+              </NavItem>
+              <NavItem eventKey={2} href="#">
+                Link Right
+              </NavItem>
+              <NavItem eventKey={2} href="#">
+                
+              </NavItem>
+            </Nav>
+          </Navbar.Collapse>
+          </Navbar>
+          </div>
+
+          <div>
               <ControlledCarousel />
         </div>
 
@@ -133,21 +150,21 @@ class ControlledCarousel extends React.Component {
         onSelect={this.handleSelect}
       >
         <Carousel.Item>
-          <img width={700} height={500} alt="900x500" src="./images/scroller1.jpg" />
+          <img alt="700x500" src="./images/1.png" />
           <Carousel.Caption>
             <h3>First slide label</h3>
             <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
-          <img width={700} height={500} alt="900x500" src="./images/scroller1.jpg" />
+          <img alt="900x500" src="./images/2.png" />
           <Carousel.Caption>
             <h3>Second slide label</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
-          <img width={700} height={500} alt="900x500" src="./images/scroller1.jpg" />
+          <img alt="700x500" src="./images/3.png" />
           <Carousel.Caption>
             <h3>Third slide label</h3>
             <p>

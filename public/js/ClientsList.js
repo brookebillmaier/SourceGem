@@ -14,7 +14,7 @@ class ClientsList extends React.Component {
                 <h3> {client.name} </h3>
               </td>
               <td>
-                  <Button bsStyle="danger" className='deleteButton' onClick={() => this.props.deleteClient(client, index)}>Delete</Button>
+                  <Button bsStyle="danger" className='deleteButton' onClick={() => this.props.deleteClient(client, index)}>X</Button>
               </td>
             </tr>
           )
