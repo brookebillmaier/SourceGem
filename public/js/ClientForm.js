@@ -11,7 +11,7 @@ class ClientForm extends React.Component {
     }
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
-    this.handleClose = this.handleClose.bind(this);
+  //  this.handleClose = this.handleClose.bind(this);
   }
 
 
@@ -27,10 +27,10 @@ class ClientForm extends React.Component {
       })
     }
   }
-
-  handleClose() {
-     this.setState({ show: false });
-   }
+  //
+  // handleClose() {
+  //    this.setState({ show: false });
+  //  }
 
 
   handleChange (event) {
@@ -106,15 +106,17 @@ class ClientForm extends React.Component {
             <input className='submit' type='submit' />
           </div>
         </form>
+
+          <Button bsStyle="primary" onClick={()=> {
+            console.log("clicked")
+            this.props.toggleState('editClientIsVisible')}}>Cancel</Button>
           </center>
       </div>
       </Modal.Body>
           <Modal.Footer>
-          <Button onClick={()=> {
-            console.log("clicked")
-            this.props.toggleState(handleClose())}}>Cancel</Button>
 
-            <Button onClick={this.handleClose()}>Close</Button>
+
+          <Button>Close</Button>
 
         </Modal.Footer>
       </Modal.Dialog>

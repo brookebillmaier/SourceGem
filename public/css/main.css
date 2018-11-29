@@ -2,15 +2,27 @@
   width: 250px; }
 
 .label {
-  color: black;
-  align: left;
-  font-size: 20px; }
+  color: black; }
 
-.input {
-  height: 30px;
-  width: 60vw; }
+body {
+  background-color: #494747; }
 
-.Nav pullRight {
-  margin-right: 10px; }
+.brandlogo:a {
+  color: #5271ff;
+  text-decoration: none; }
+
+.brandlogo:hover {
+  text-decoration: none;
+  color: #5271ff; }
+
+.brandlogo:visited {
+  color: #5271ff;
+  text-decoration: none; }
+
+.container {
+  color: white; }
+
+.jumbotron {
+  color: black; }
 
 /*# sourceMappingURL=main.css.map */

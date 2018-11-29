@@ -6,6 +6,8 @@ class Clients extends React.Component {
     addClientIsVisible: false,
     clientIsVisible: false,
     editClientIsVisible: false,
+    aboutIsVisible: false,
+    about: {},
     clients : [],
     client: {}
     }
@@ -114,22 +116,31 @@ class Clients extends React.Component {
   render () {
     return (
       <div className='Portfolio'>
-      <Jumbotron>
-      <h1>View Our Portfolio!</h1>
-      <p>
-        This is a simple hero unit, a simple jumbotron-style component for calling
-        extra attention to featured content or information.
-      </p>
-      <p>
-        <Button bsStyle="primary" onClick={()=>this.toggleState('addClientIsVisible', )}>Become a Client</Button>
+        <div className="jumbotron">
+        <Jumbotron>
+        <h1>View Our Portfolio!</h1>
+        <p>
+          This is a simple hero unit, a simple jumbotron-style component for calling
+          extra attention to featured content or information.
+        </p>
+        <p>
+          <Button bsStyle="primary" onClick={()=>this.toggleState('addClientIsVisible', )}>Become a Client</Button>
 
-        <Button bsStyle="primary"
-         onClick={()=>this.toggleState('clientsListIsVisible')}
-         >
-         View Full Portfolio
-         </Button>
-         </p>
-         </Jumbotron>
+          <Button bsStyle="primary"
+           onClick={()=>this.toggleState('clientsListIsVisible')}
+           >
+           View Full Portfolio
+           </Button>
+
+           <Button bsStyle="primary"
+            onClick={()=>this.toggleState('aboutIsVisible')}
+            >
+            About Us
+            </Button>
+
+           </p>
+           </Jumbotron>
+           </div>
 
         {
           this.state.clientsListIsVisible ?
@@ -165,7 +176,12 @@ class Clients extends React.Component {
           handleSubmit={this.handleUpdateSubmit}
          /> : ''
     }
-
+    {
+      this.state.aboutIsVisible  ?
+       <About
+        toggleState={this.toggleState}
+       /> : ''
+  }
 
 
       </div>

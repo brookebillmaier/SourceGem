@@ -1,18 +1,35 @@
+
 .logo {
   width: 250px;
 }
 
 .label {
   color: black;
-  align: left;
-  font-size: 20px;
 }
 
-.input {
-  height: 30px;
-  width: 60vw;
+body {
+  background-color: #494747;
+}
+.brandlogo:a {
+  color: #5271ff;
+  text-decoration: none;
+}
+.brandlogo:hover {
+  text-decoration: none;
+  color: #5271ff;
+}
+.brandlogo:visited {
+  color: #5271ff;
+  text-decoration: none;
 }
 
-.Nav pullRight {
-  margin-right: 10px;
+.container {
+  color: white;
+}
+
+.jumbotron {
+  color: black;
+}
+.Portfolio {
+  
 }
