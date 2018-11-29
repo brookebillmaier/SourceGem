@@ -3,6 +3,11 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.3.7'
 
+source "https://rails-assets.org"
+
+gem 'rails-assets-bootstrap', ">= 4.0.0.alpha.2"
+gem 'rails-assets-tether'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1'
 # Use postgresql as the database for Active Record
