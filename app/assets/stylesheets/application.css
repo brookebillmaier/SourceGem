@@ -13,11 +13,3 @@
  *= require_tree .
  *= require_self
  */
-@import "neat";
-@import "bourbon";
-@import "home";
-@import "users";
-
-@import "bootstrap-sprockets";
-@import "bootstrap";
-//= require react_bootstrap

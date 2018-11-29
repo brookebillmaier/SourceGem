@@ -6,7 +6,6 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-
 # CREATE TABLE clients (id SERIAL, name text, industry text, slogan text, type TEXT, logo TEXT);
 
 
