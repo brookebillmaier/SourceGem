@@ -9,18 +9,13 @@ gem 'rails', '~> 5.2.1'
 gem 'pg', '>= 0.18', '< 2.0'
 #Faker
 gem 'faker'
-<<<<<<< HEAD
-#Bourbon
-gem 'bourbon'
 
-=======
 #react Bootstrap
 gem 'react-bootstrap-rails'
 
-gem 'bootstrap-sass'
 #Bourbon
 gem "bourbon"
->>>>>>> 936cc53c9d306dd241b3887ad973ad93d9fb7850
+
 #Neat
 gem "neat"
 # Use Puma as the app server
@@ -30,9 +25,6 @@ gem 'sass-rails', '~> 5.0'
 
 gem 'bootstrap-sass', '3.2.0.2'
 
-
-# Use Puma as the app server
-gem 'puma', '~> 3.11'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
