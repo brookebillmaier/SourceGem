@@ -8,15 +8,13 @@ class App extends React.Component {
         <Navbar inverse collapseOnSelect>
           <Navbar.Header>
             <Navbar.Brand>
-              <a href="#brand">SourceGem</a>
+              <nobr><a href ="/" class="brandlogo"> SourceGem <img src ="./images/gemicon.png" width="20px"/></a></nobr>
             </Navbar.Brand>
             <Navbar.Toggle />
           </Navbar.Header>
           <Navbar.Collapse>
             <Nav>
-              <NavItem eventKey={1} href="#">
-                Link
-              </NavItem>
+
               <NavItem eventKey={2} href="#">
                 Link
               </NavItem>
@@ -161,8 +159,7 @@ class ControlledCarousel extends React.Component {
         <Carousel.Item>
           <img alt="900x500" src="./images/2.png" />
           <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
