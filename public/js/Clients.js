@@ -7,7 +7,6 @@ class Clients extends React.Component {
     clientIsVisible: false,
     editClientIsVisible: false,
     aboutIsVisible: false,
-    about: {},
     clients : [],
     client: {}
     }
@@ -122,22 +121,24 @@ class Clients extends React.Component {
         <p>
           We love what we do and we hope you do too. View our work and happy clients below.
         </p>
-        <p class="buttons">
-          <Button bsStyle="primary" onClick={()=>this.toggleState('addClientIsVisible', )}>Become a Client</Button>
+        <div className="buttons">
+        <ButtonToolbar>
+          <Button bsStyle="primary" className="jumboButton" onClick={()=>this.toggleState('addClientIsVisible', )}>Become a Client</Button>
 
-          <Button bsStyle="primary"
+
+          <Button bsStyle="primary" className="jumboButton"
            onClick={()=>this.toggleState('clientsListIsVisible')}
            >
            View Full Portfolio
            </Button>
 
-           <Button bsStyle="primary"
+           <Button bsStyle="primary" className="jumboButton"
             onClick={()=>this.toggleState('aboutIsVisible')}
             >
             About Us
             </Button>
-
-           </p>
+          </ButtonToolbar>
+           </div>
            </Jumbotron>
            </div>
 

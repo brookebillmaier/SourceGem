@@ -1,6 +1,19 @@
 
 
 class App extends React.Component {
+  constructor (props) {
+    super(props)
+    this.state = {
+      webDesignIsVisible: false
+    }
+  }
+
+  toggleState (st1, st2) {
+    this.setState({
+      [st1]: !this.state[st1],
+      [st2]: !this.state[st2]
+    })
+  }
   render () {
     return (
       <div className="main">
@@ -52,6 +65,7 @@ class App extends React.Component {
           <center>
             <Row>
               <Col xs={6} md={3}>
+
                   <Thumbnail href="#" alt="171x180" src="./images/4.png" />
                   <h4>Website Design</h4>
               </Col>
@@ -85,9 +99,16 @@ class App extends React.Component {
                 <Thumbnail href="#" alt="171x180" src="./images/5.png" width ="262px"/>
                 <h4>Email Marketing</h4>
               </Col>
-            </Row>
-            </center>
-          </Grid>
+
+        {
+          this.state.webDesignIsVisible ?
+            <WebDesign
+              toggleState={this.toggleState}
+              /> : ''
+          }
+          </Row>
+          </center>
+        </Grid>
 
         </div>
         <div className='main'>
@@ -105,6 +126,7 @@ class App extends React.Component {
 
 var Carousel = ReactBootstrap.Carousel;
 var Button = ReactBootstrap.Button;
+var ButtonToolbar = ReactBootstrap.ButtonToolbar;
 var Nav = ReactBootstrap.Nav;
 var Navbar = ReactBootstrap.Navbar;
 var NavItem = ReactBootstrap.NavItem;
@@ -119,6 +141,7 @@ var Modal = ReactBootstrap.Modal;
 var ModalFooter = ReactBootstrap.ModalFooter;
 var ModalBody = ReactBootstrap.ModalBody;
 var ModalDialog = ReactBootstrap.ModalDialog;
+var InputGroup = ReactBootstrap.InputGroup;
 
 
 

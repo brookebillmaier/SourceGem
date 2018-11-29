@@ -53,6 +53,7 @@ class ClientForm extends React.Component {
         </Modal.Header>
       <Modal.Body>
       <div className='field'>
+      <InputGroup>
 
         <form onSubmit={this.handleSubmit}>
           <label className='label' for='name'>Name</label>
@@ -104,20 +105,18 @@ class ClientForm extends React.Component {
               value={this.state.logo}
             />
           </div>
-          <center>
-          <div className='control'>
-            <input className='submit' type='submit' />
-          </div></center>
-        </form>
-      </div>
-      </Modal.Body>
-          <Modal.Footer>
 
+        <Modal.Footer>
+          <Button bsStyle="primary" type='submit' >Submit</Button>
           <Button bsStyle="primary" onClick={()=> {
             console.log("clicked")
             this.props.toggleState('editClientIsVisible')}}>Cancel</Button>
 
         </Modal.Footer>
+          </form>
+          </InputGroup>
+          </div>
+          </Modal.Body>
       </Modal.Dialog>
     </div>
     )
