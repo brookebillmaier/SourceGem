@@ -1,24 +1,16 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+https://sourcegem.herokuapp.com/
 
-Things you may want to cover:
+## Technologies Used: 
+* Ruby on Rails
+* React
+* React Bootstrap
+* PostgreSQL
+* Sass
 
-* Ruby version
+## Approach Taken: 
+I wanted to create a Dev shop/Marketing business app. I focused a majority of the time teaching myself React Bootstrap and wanted the page to look uniform. In the future, I would like to implement it so clients could control their website and make updates directly from the app. 
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Future Optimizations:
+Very soon in the future I would like to add authorization so only one user is able to delete/update clients and make the entire website production level overall. I will also be implementing a modal for the services offered.  
